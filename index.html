@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumière Travel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <nav class="nav" id="nav">
+    <a href="#home">Inicio</a>
+    <a href="#destinos">Destinos</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#testimonios">Testimonios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <button id="menu-toggle" class="menu-toggle">☰</button>
+</header>
+
+<!-- HERO CON LOGO REALISTA -->
+<section id="home" class="hero">
+  <div class="hero-logo-container">
+    <svg width="500" height="250" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+      <rect width="500" height="250" fill="#87ceeb"/> <!-- cielo -->
+
+      <!-- Sol animado -->
+      <circle cx="450" cy="50" r="30" fill="yellow">
+        <animate attributeName="r" values="30;35;30" dur="4s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Playa y arena -->
+      <rect x="0" y="180" width="500" height="70" fill="#f4d27a"/> <!-- arena -->
+      <path d="M0 180 Q50 160 100 180 T200 180 T300 180 T400 180 T500 180 L500 250 L0 250 Z" fill="#00bfff" opacity="0.5"/> <!-- olas -->
+
+      <!-- Aviones animados -->
+      <g class="plane1" transform="translate(-50,100)">
+        <path d="M0 0 L20 5 L0 10 L5 5 Z" fill="#ff4500">
+          <animateTransform attributeName="transform" type="translate" values="-50,100;550,50;-50,100" dur="6s" repeatCount="indefinite"/>
+          <animateTransform attributeName="transform" type="rotate" values="0 10 5;20 10 5;0 10 5" dur="6s" repeatCount="indefinite"/>
+        </path>
+      </g>
+      <g class="plane2" transform="translate(550,150)">
+        <path d="M0 0 L20 5 L0 10 L5 5 Z" fill="#ff6347">
+          <animateTransform attributeName="transform" type="translate" values="550,150;-50,120;550,150" dur="8s" repeatCount="indefinite"/>
+          <animateTransform attributeName="transform" type="rotate" values="0 10 5;-15 10 5;0 10 5" dur="8s" repeatCount="indefinite"/>
+        </path>
+      </g>
+
+      <!-- Destinos famosos con emojis -->
+      <text x="20" y="40" font-size="22" fill="#ffffff" font-weight="700">🏖️ Bali</text>
+      <text x="20" y="70" font-size="22" fill="#ffffff" font-weight="700">🌴 Maldivas</text>
+      <text x="350" y="40" font-size="22" fill="#ffffff" font-weight="700">🗼 París</text>
+      <text x="350" y="70" font-size="22" fill="#ffffff" font-weight="700">🗽 Nueva York</text>
+      <text x="200" y="100" font-size="22" fill="#ffffff" font-weight="700">🏖️ Barcelona</text>
+
+      <!-- Texto principal -->
+      <text x="250" y="220" text-anchor="middle" font-family="Playfair Display, serif" font-size="32" font-weight="700" fill="#ffd700">
+        Lumière Travel
+        <animate attributeName="fill" values="#ffd700;#ffffff;#ffd700" dur="3s" repeatCount="indefinite"/>
+      </text>
+    </svg>
+  </div>
+
+  <p class="hero-lead">Explora el mundo con estilo, lujo y comodidad.</p>
+  <a class="btn primary" href="#destinos">Ver destinos</a>
+</section>
+
+<!-- DESTINOS POPULARES CON EMOJIS ANIMADOS -->
+<section id="destinos" class="destinos">
+  <div class="container">
+    <h2>Destinos Populares</h2>
+    <ul class="destinos-list">
+      <li data-emoji="🏖️">Bali</li>
+      <li data-emoji="🌴">Maldivas</li>
+      <li data-emoji="🗼">París</li>
+      <li data-emoji="🗽">Nueva York</li>
+      <li data-emoji="🏖️">Barcelona</li>
+      <li data-emoji="🌴">Sídney</li>
+      <li data-emoji="🏜️">Dubai</li>
+      <li data-emoji="🏖️">Río de Janeiro</li>
+      <li data-emoji="🏛️">Roma</li>
+      <li data-emoji="🏝️">Bali</li>
+    </ul>
+    <div id="emoji-float" class="emoji-float"></div>
+  </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="services">
+  <div class="container">
+    <h2>Servicios Premium</h2>
+    <div class="services-grid">
+      <div class="service-card"><h3>Paquetes de lujo</h3><p>Viajes personalizados a tus destinos favoritos.</p></div>
+      <div class="service-card"><h3>Reservas de vuelos</h3><p>Boletos y vuelos con comodidad y estilo.</p></div>
+      <div class="service-card"><h3>Hoteles exclusivos</h3><p>Hospedaje premium en los mejores hoteles.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIOS -->
+<section id="testimonios" class="testimonios">
+  <div class="container">
+    <h2>Testimonios</h2>
+    <div class="testimonial-card">
+      <p>"Lumière Travel hizo de nuestro viaje a París una experiencia inolvidable."</p>
+      <span>- Ana P.</span>
+    </div>
+    <div class="testimonial-card">
+      <p>"Servicio impecable y destinos de ensueño. Muy recomendado."</p>
+      <span>- Carlos M.</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="contact">
+  <div class="container">
+    <h2>Contacto & Reservas</h2>
+    <p>Email: <a href="mailto:marcelapaternina243@gmail.com">marcelapaternina243@gmail.com</a></p>
+    <p>WhatsApp: <a class="whatsapp" href="https://wa.me/573014942815?text=Hola%20Lumi%C3%A8re%20Travel%2C%20quiero%20reservar%20un%20viaje" target="_blank">301 494 2815</a></p>
+  </div>
+</section>
+
+<!-- PIE DE PÁGINA -->
+<footer class="site-footer">
+  <p>© <span id="year"></span> Lumière Travel —Creada Por Inis Marcela </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
