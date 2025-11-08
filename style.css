@@ -1,0 +1,49 @@
+:root{
+  --bg:#0a1f2c;
+  --gold:#ffd700;
+  --blue:#00bfff;
+  --white:#ffffff;
+  --soft:#b0e0e6;
+  --radius:12px;
+  --maxw:1100px;
+  font-family:'Poppins', sans-serif;
+}
+body{margin:0; background:var(--bg); color:var(--white); line-height:1.5;}
+.site-header{max-width:var(--maxw); margin:0 auto; display:flex; justify-content:flex-end; padding:18px 20px; position:sticky; top:0; background:rgba(0,0,0,0.9); z-index:120;}
+.nav{display:flex; gap:16px;}
+.nav a{color:var(--soft); text-decoration:none; padding:8px 10px; border-radius:8px; font-weight:600;}
+.nav a:hover{background:rgba(255,255,255,0.05);}
+.menu-toggle{display:none;}
+.hero{max-width:var(--maxw); margin:40px auto; text-align:center; padding:40px 20px; position:relative;}
+.hero-lead{color:var(--soft); font-size:1.2rem; margin-bottom:20px;}
+.btn{display:inline-block;padding:10px 22px;border-radius:40px;text-decoration:none;font-weight:700;margin:6px; transition:transform .22s ease;}
+.btn.primary{background:linear-gradient(90deg,var(--gold),var(--blue)); color:#0a1f2c;}
+.btn:hover{transform:translateY(-3px);}
+.destinos, .services, .testimonios, .contact{padding:40px 20px;}
+.destinos-list{list-style:none; padding:0; font-size:1.1rem;}
+.destinos-list li{
+  background:rgba(255,255,255,0.05); 
+  margin:8px 0; 
+  padding:12px 16px; 
+  border-radius:var(--radius);
+  position:relative;
+  cursor:pointer;
+  transition:transform 0.2s ease;
+}
+.destinos-list li:hover{
+  transform:scale(1.05);
+}
+.emoji-float{
+  position:absolute;
+  font-size:24px;
+  pointer-events:none;
+  opacity:0;
+  transition:opacity 0.3s ease, transform 0.3s ease;
+}
+.services-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px;}
+.service-card, .testimonial-card{background:rgba(255,255,255,0.05); padding:20px; border-radius:var(--radius);}
+.service-card h3{color:var(--gold);}
+.testimonial-card span{color:var(--soft);}
+.site-footer{padding:20px; text-align:center; color:var(--soft); border-top:1px solid rgba(255,255,255,0.02);}
+.floating-whatsapp{position:fixed;right:18px;bottom:18px;background:linear-gradient(90deg,var(--gold),var(--blue));color:#0a1f2c;padding:12px 14px;border-radius:999px;font-weight:800;text-decoration:none;box-shadow:0 10px 30px rgba(255,215,0,0.18); z-index:140;}
+@media(max-width:900px){.nav{display:none;}.menu-toggle{display:block;}}
